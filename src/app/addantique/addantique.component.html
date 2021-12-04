@@ -1,0 +1,80 @@
+<div class="banner">
+    <div class="row">
+        <div class="col-md-12">
+        <form method="POST" (ngSubmit)="addNewitem()"id="myforms1" #additem="ngForm" enctype="multipart/form-data">
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <h1>{{title}}</h1>
+              </div>
+            </div>
+            <div class="row">
+            <div class="col-md-6">
+              <div class="form-row">
+                <div class="form-group col-lg-8">
+                  <div class="input-group" id="one">
+                   <h3>Item</h3> 
+                  <input type="text" class="form-control" name="title" id="name" [(ngModel)]="newAntiqueItem.name" #name='ngModel' [class.is-invalid]='(!name.dirty)' placeholder="Item name" style="margin-left: 12%;" required>
+                </div>
+                  <label for="error1" id="error1" [class.d-none]='(name.dirty)'>Please enter item's name</label>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-lg-8">   
+                  <div class="input-group" id="two">
+                    <h3>Type </h3> 
+                  <input type="text" class="form-control" name="type" id="type" [(ngModel)]="newAntiqueItem.type" #type='ngModel' [class.is-invalid]='!(type.dirty)' placeholder="Item type" style="margin-left: 6%;" required >
+                </div>
+                  <label for="error2" id="error2" [class.d-none]='(type.dirty)'>Please enter type of item</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-lg-8">
+                  <div class="input-group" id="three">
+                   <h3>Price</h3>
+                  <input type="text" class="form-control" name="price" id="genre1"[(ngModel)]="newAntiqueItem.price" #price='ngModel' [class.is-invalid]='!(price.dirty)' placeholder="Price" required >
+                  </div>
+                  <label for="error3" id="error3" [class.d-none]='(price.dirty)'>Please enter the price of item</label>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-lg-8">
+                  <div class="input-group" id="three">
+                   <h3>ProductId</h3>
+                  <input type="text" class="form-control" name="prodID" id="genre1"[(ngModel)]="newAntiqueItem.prodID" #prodID='ngModel' [class.is-invalid]='!(prodID.dirty)' placeholder="Product ID" required >
+                  </div>
+                  <label for="error3" id="error3" [class.d-none]='(prodID.dirty)'>Please enter the product ID</label>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-lg-8">
+                  <div class="input-group" id="four">
+                   <h3>Description</h3>
+                  <textarea class="form-control" id="synopsis" name="description" [(ngModel)]="newAntiqueItem.description" #description='ngModel' [class.is-invalid]='!(description.dirty)' rows="5" cols="33" required></textarea>
+                  </div>
+                  <label for="error4" id="error4" [class.d-none]='(description.dirty)'>Please enter a short description of item</label>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-6">
+    <div class="form-row">
+        <div class="form-group col-lg-8">
+          <div class="input-group" id="five">
+           <h3>Image</h3>
+           <input type="text" class="form-control" name="image" id="genre1"[(ngModel)]="newAntiqueItem.image" #image='ngModel' [class.is-invalid]='!(image.dirty)' placeholder="Image" required >
+                        <img src={{newAntiqueItem.image}} class="img-fluid rounded float-start border border-dark" alt="" style="width: 180px; height: 200px; margin-top: 5%;">
+          </div>
+          <label for="error5" id="error5" [class.d-none]='(image.dirty)'>Please enter an image of item</label>
+        </div>
+      </div>
+    </div>
+    </div>
+                <div class="form-row">   
+                  <div class="form-group col-lg-8">
+                      
+                <input type="submit" class="btn btn-primary" value="Submit" id="myButton" [disabled]='!(additem.form.dirty && additem.form.valid)'>
+              </div>
+              </div>
+                </form>
+    </div>
+    </div>
+    </div>

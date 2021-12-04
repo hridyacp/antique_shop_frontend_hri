@@ -1,0 +1,38 @@
+button{
+    color:white;
+   
+        background-color: rgb(97, 74, 15) ;
+        width:200px;
+        height:40px;
+        border-radius: 10px;
+        font-size: 20px;
+    
+}
+button:hover{
+    background-color:  rgb(179, 146, 62);
+}
+.card{
+    box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+}
+.header{
+    position:absolute;
+}
+.header h2{
+ padding-top:70px;
+ padding-bottom:0;
+ font-weight:600px;
+ position: relative;
+ animation: h2 5s 1;
+ text-align: center;
+ font-weight: 900px;
+ /* margin-left:450px !important; */
+}
+@keyframes h2{
+0%{
+    color: transparent;
+}
+30%{
+    letter-spacing: 20px;
+
+}
+}

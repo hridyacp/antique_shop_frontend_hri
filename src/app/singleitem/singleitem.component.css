@@ -1,0 +1,12 @@
+h5,h4{
+    text-align:center;
+    font-family:cursive;
+    color:black;
+}
+.btn1{
+border-radius: 10px;
+width: 150px;
+ background-color: rgb(97, 74, 15) ;
+color:white;
+height:30px;
+}

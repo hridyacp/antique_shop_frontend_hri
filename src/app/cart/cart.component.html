@@ -1,0 +1,41 @@
+<br>
+<br>
+<div class="container">
+    <div class="row"> 
+    <div *ngIf="emptycart">
+       <h1 style="margin-top:20%; margin-left:30%; font-family: cursive;">Your cart is empty. Startshopping?</h1> 
+                    </div>
+                  </div>
+    <div class="row">   
+        <div *ngIf="!emptycart"> 
+        <div class="col-md-12" style="margin-left:20%;">
+        <div class="card flex-row flex-wrap" *ngFor="let items of newCartItem">
+            
+            <div class="card-header border-0">
+    <img class="card-img-"  style="height: 15rem; width:20rem; border-radius: 10px;"  [src]="items.image" alt="Card image cap">
+</div>
+<div class="card-block px-5">
+    <div class="card-body">
+      <h3 class="card-title" style="color:black; height:20px; text-align:left; font-family: cursive;">{{items.name}}</h3>
+    </div>
+    <ul class="list-group list-group-flush-right">
+        <li class="list-group-item" style= "font-family:cursive; height:40px;">Qty:{{items.qty}}</li>
+      <li class="list-group-item" style= "font-family:cursive; height:40px;">{{items.price}}</li>
+      
+    </ul>
+    <button class="card-link" style= "font-family:cursive;  height:40px;" (click)="deleteCart(items)">Delete</button>
+    <br> 
+</div>
+<div class="w-100"></div></div> </div>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h2 style="font-family: cursive;">Total payment: {{newpay.totalpay}}</h2>
+    <button class="card-link" style= "font-family:cursive;  height:40px;" (click)="checkOut()">Check Out</button>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+   

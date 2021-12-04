@@ -1,0 +1,24 @@
+<div class="banner">
+    <div class="dives">
+        <h1 style="text-align:center; font-family: cursive;" >Checkout</h1><br>
+        <div class="col-lg-25 loginmargin">
+          <form #userlogin="ngForm" (ngSubmit)="payment(newstuds)">
+            <div class="form-group">
+              <label for="inputAddress" style="color:black; font-family: cursive;">Address</label>
+              <textarea type="text" class="form-control" id="inputAddress" name="address" [(ngModel)]="newstuds.address" #address='ngModel' [class.is-invalid]='address.invalid && (address.dirty || address.touched)' required rows="4" cols="50"></textarea>
+              <label [class.d-none]='address.valid' style="font-family: cursive;">Please enter the Adress</label>
+            </div>
+            <div class="form-group">
+                <h2 style="color:black; font-family: cursive;">Total payment:{{newpay.totalpay}}</h2>
+              </div>
+            <div class="container"> 
+
+            <button type="submit" id="btn" style="font-family: cursive;" [disabled]="!(userlogin.form.valid)" *ngIf="!tokenvalue">Make Payment</button>
+        </div>
+          </form>
+          <div class="container"> 
+
+            <button type="submit" id="btn" style="font-family: cursive;" [disabled]="!(userlogin.form.valid)" (click)="paid()" *ngIf="tokenvalue">Done</button>
+        </div>
+        </div>
+    </div>

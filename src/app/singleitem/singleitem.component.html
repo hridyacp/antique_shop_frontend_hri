@@ -1,0 +1,56 @@
+<br>
+<br>
+<br><br>
+
+
+<!------------------Aside contents------------------->
+
+  <div class="container">  
+        
+          <div class="row">
+            <div class="col-sm-12">
+ 
+  <br><br>
+
+
+<!--/stories-->
+<div class="row">    
+            <br><br>
+            <div class="col-md-4 col-sm-3 text-center">
+              <a class="story-title" href="#"><img alt="" [src]="newAntiqueItem.image" style="width:300px;height:300px"></a>
+            </div>
+            <div class="col-md-8 col-sm-9">
+              <h3 style="text-align: center;font-family:cursive;" name="title">{{newAntiqueItem.name}} </h3>
+             
+                <div class="col-xs-9">
+                  <h5><span class="label label-default" style="font-family:cursive;">{{newAntiqueItem.type}}</span></h5>
+                  <h5 style="font-family:cursive;">
+                  <small style="font-family:cursive;">{{newAntiqueItem.price}}<a href="#" class="text-muted"></a></small>
+                  </h5></div>
+                
+                <div class="col-xs-3" style="text-align: justify;font-family:cursive;"><p style="font-family:cursive;">{{newAntiqueItem.description}}</p></div>
+               
+
+             
+
+                <div class="col-xs-6"  style="float: left; padding-left: 300px;">
+                  <form>
+            <button class="btn1"  style="font-family: cursive;" *ngIf="_auth.loggedIn() &&_auth.getRole()" (click)="addCart(newAntiqueItem)">Add to cart</button>
+            </form></div>
+            <div class="col-xs-6">
+            <form >
+            <button class="btn1"  style="font-family: cursive; float: right; margin-right: 300px;" *ngIf="_auth.loggedIn() &&_auth.getRole()"(click)="addWish(newAntiqueItem)">Add to wish list</button>
+            </form>
+          </div></div>
+                  
+                  </div></div>
+               
+              </div>
+              <br>
+            </div>
+      
+            <hr>
+           
+  <br><br>
+  
+          <!--/stories-->

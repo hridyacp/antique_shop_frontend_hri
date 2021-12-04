@@ -1,0 +1,58 @@
+.row{
+    background: white;
+    border-radius: 30px; 
+    box-shadow: 12px 12px 12px #7c590e;
+    margin-top:50px; 
+    
+    
+    }
+    .login{
+        margin-top:20px;
+    }
+    .login img{
+        border-bottom-left-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    h5{
+        /* font-family: 'Zen Loop', cursive; */
+        font-size: 2rem;
+    }
+    .form-control{
+        height:50px;
+        width:70%;
+        border:1px solid rgb(228, 226, 226);
+        outline:none;
+        margin-left: 100px;
+        border-radius: 60px;
+        box-shadow: 1px -11px 3px -2px rgba(204,212,211,0.46);
+        -webkit-box-shadow: 1px -11px 3px -2px rgba(204,212,211,0.46);
+        -moz-box-shadow: 1px -11px 3px -2px rgba(204,212,211,0.46);
+    }
+    
+    .btn1{
+        height:40px;
+        width:50%;
+        border:none;
+        outline:none;
+        border-radius: 60px;
+        background-color: rgb(97, 74, 15) ;
+        color:white;
+    }
+    .btn1:hover{
+        background-color: rgb(97, 74, 15) ;
+        color:white;
+        transition: 0.5s;
+    }
+    .col-lg-10 i{
+        position:absolute;
+    }
+    .fa{
+        position:relative;
+       
+        display: inline;
+    }
+    span{
+        border-top-right-radius:60px;
+        border-bottom-right-radius:60px;
+        height:49px;
+    }
